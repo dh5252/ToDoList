@@ -4,36 +4,48 @@
         <title>toDoList by Ahn</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Blinker:wght@100&family=Nunito:wght@200&display=swap" rel="stylesheet">
+        
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="layout.css">
 
     </head>
 
     <body>
-        <div>
+        <div id="header">
             <h1 id="title">To Do List</h1>
         </div>
         <div id="grid_container">
-            <div id="function_bar">
+            <div id="function_Section">
                 <div>
-                    <input type="button" value="What to do today" onclick="">
-                    <input type="button" value="What to do later" onclick="">
-                </div>
-                <input type="text" value="Add something to do" onclick="">
-                <br>
-                <input type="text" value="Remove something to do" onclick="">
-                <br>
-                
+                    <button class="func_btn" onclick="">+something to do today</button>
+                    <br>
+                    <button class="func_btn" onclick="">+something to do later</button>
+                    <br>
+                    <button class="func_btn" onclick="">-something to do today</button>
+                    <br>
+                    <button class="func_btn" onclick="">-something to do later</button>
+                </div>    
             </div>
             
-            <div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, ad exercitationem odit pariatur consequatur magnam necessitatibus praesentium corrupti quod quidem, autem recusandae illum, fugiat maiores quisquam iste? Inventore, error alias?
+            <div id="todayWork_Section" class="workList">
+                <h3>What to do by today</h3>
+                <ul>
+                    <li>dkdkdkdkdkdkdkd</li>
+                    <li>dkdkdkdkdkdkdkd</li>
+                    <li>dkdkdkdkdkdkdkd</li>
+                    <li>dkdkdkdkdkdkdkd</li>
+                </ul>
             </div>
+            
 
-            <div>
-                fuck
+            <div id="laterWork_Section" class="workList">
+                <h3>What to do in time</h3>
+                <ul>
+                    <li>dkdkdkdkdkdkdkd</li>
+                    <li>dkdkdkdkdkdkdkd</li>
+                    <li>dkdkdkdkdkdkdkd</li>
+                    <li>dkdkdkdkdkdkdkd</li>
+                </ul>
             </div>
 
         </div>

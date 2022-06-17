@@ -4,23 +4,42 @@ var workList = {
     "addToToday" : function(work){
             
         const li = document.createElement("li");
-
+        const checkBox = document.createElement('input');
+   
         li.setAttribute('id', work);
-
+        checkBox.setAttribute('type','checkbox');
+        checkBox.setAttribute('class',"isChecked");
+   
         const textNode = document.createTextNode(work);
         li.appendChild(textNode);
 
         document.getElementById('todayList').appendChild(li);
+        li.prepend(checkBox);
+
     },  
-    // 코드 이해가 안되니까 이해해보자
-    // js를 이용해 html에서 뭔가를 가져오는 것과는 달리 js에서 뭔가를 만들어서 html에 넣을 수도 있다.
+
+    
+    "removeTodayWork" : function(){
+        var checkBoxList = document.getElementsByClassName("isChecked");
+        var tmp = 0;
 
 
+        for(var i = 0; i<checkBoxList.length;i++){
+            if (checkBoxList[i].checked == true){
+                checkBoxList[i].parentElement.remove();
+                i--;
+                tmp = 1;
+            }
+            
+        }
 
-
-    // "removeTodayWork" : function(){
-    //     this.todayList
-    // },
+        if(tmp == 0){
+            alert('삭제할 일을 체크해주세요');
+        }
+        else{
+            alert('할일을 완료하거나 삭제했습니다.')
+        }
+    },
     
     "addToLater" : function(work){
         

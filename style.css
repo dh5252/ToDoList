@@ -45,7 +45,6 @@ body{
     background-color: inherit;
     font-family: 'Blinker', sans-serif;
 }
-/* 배경 그라데이션 효과 라이브러리 필요 */
 
 .func_btn:hover{
     color : yellow;
@@ -82,3 +81,27 @@ body{
 #overdue_Section ul{
     list-style: none;
 }
+
+#boxDesign{
+    display : none;
+}
+#boxDesign+label{
+    display: inline-block;
+    cursor: pointer;
+    width : 20px;
+    height : 20px;
+    border : 1px black solid;
+}
+
+#boxDesign:checked+label{
+    background-color: red;
+}
+
+.checkBoxText{
+    position : absolute;
+    top : 4px;
+    left : 28px;
+}
+
+
+
